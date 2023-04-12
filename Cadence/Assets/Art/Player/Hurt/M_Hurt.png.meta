@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3122bd7df4f4f45448af58f09c0c2ce4
+guid: c67915fbd47bc0d49bd9797468ace4b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 360
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,224 +105,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stone_0
+      name: M_Hurt_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1365.3333
-        width: 682.6667
-        height: 682.6667
+        y: 2160
+        width: 720
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -35.5, y: -341.16675}
-        - {x: 341.33334, y: -341.16675}
-        - {x: 341.33334, y: 15.833252}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11c8ff17a38fd2e468cf05960c6667b9
-      internalID: 1941230937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stone_1
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 1365.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -341.33334, y: 15.833252}
-        - {x: -341.33334, y: -341.16675}
-        - {x: 341.33334, y: -341.16675}
-        - {x: 341.33334, y: 18.833252}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 985d1ef1aa8b95d4f8078eaf18a11494
-      internalID: -1825451475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stone_2
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 1365.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -341.33334, y: 18.833252}
-        - {x: -341.33334, y: -341.16675}
-        - {x: 23.5, y: -341.16675}
-        - {x: 23.5, y: -335.16675}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c00081b7c3bab347951a0980b5b3b0d
-      internalID: 1808141076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stone_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 683.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -44.5, y: 341.33334}
-        - {x: -45.5, y: -304.1667}
-        - {x: -40.5, y: -341.1667}
-        - {x: 341.33334, y: -341.1667}
-        - {x: 341.33334, y: 341.33334}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72a65b4416ff9f645a81f3cef6e3711a
-      internalID: -957213084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stone_4
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 683.3333
-        width: 682.6667
-        height: 682.6667
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bbf2706c49aa4d4e973444e8c1ace69
-      internalID: -2141821623
+      spriteID: a8c4484e7a8946a428212f74640cd308
+      internalID: -592678719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stone_5
+      name: M_Hurt_1
       rect:
         serializedVersion: 2
-        x: 1364
-        y: 683.3333
-        width: 682.6667
-        height: 682.6667
+        x: 720
+        y: 2160
+        width: 720
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -341.33334, y: 341.33334}
-        - {x: -341.33334, y: -341.1667}
-        - {x: 36.5, y: -341.1667}
-        - {x: 28.5, y: 341.33334}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17061663360027c4580ba44474ffe3a4
-      internalID: 912983200
+      spriteID: 00e539d225292034e86172b051171a67
+      internalID: 1337146945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stone_6
+      name: M_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17680c92bfafec94b82de2f32209a8b2
+      internalID: -699930013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 1.333313
-        width: 682.6667
-        height: 682.6667
+        y: 1440
+        width: 720
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -38.5, y: 341.33334}
-        - {x: 333.5, y: -35.166687}
-        - {x: 341.33334, y: -35.166687}
-        - {x: 341.33334, y: 341.33334}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f984f50523b280348b7b508e2fc70403
-      internalID: -151624349
+      spriteID: d8ad0ddd2b3816144b520cbb797b1390
+      internalID: 2016136568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stone_7
+      name: M_Hurt_4
       rect:
         serializedVersion: 2
-        x: 682
-        y: 1.333313
-        width: 682.6667
-        height: 682.6667
+        x: 720
+        y: 1440
+        width: 720
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -341.33334, y: 341.33334}
-        - {x: -341.33334, y: -37.166687}
-        - {x: 323.5, y: -50.166687}
-        - {x: 341.33334, y: -41.166687}
-        - {x: 341.33334, y: 341.33334}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed110b72c07f194fa423b48455c2fd5
-      internalID: 1730755040
+      spriteID: 17d71cfe7c21cb642817be8714a59aae
+      internalID: -1810021327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stone_8
+      name: M_Hurt_5
       rect:
         serializedVersion: 2
-        x: 1364
-        y: 1.333313
-        width: 682.6667
-        height: 682.6667
+        x: 1440
+        y: 1440
+        width: 720
+        height: 720
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 29.5, y: 336.8333}
-        - {x: 29.5, y: 341.33334}
-        - {x: -341.33334, y: 341.33334}
-        - {x: -341.33334, y: -41.166687}
-        - {x: -337.5, y: -41.166687}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a16e287fe95cd5d49927bcac54f14f8c
-      internalID: 1719034308
+      spriteID: e5aa10905e7ccbb4a9dffe3bba372d5a
+      internalID: 1741906450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739c70a65d69fcd4495015590dbdcd13
+      internalID: -767971910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f665d50d7360e86429acd3392d275db8
+      internalID: 686774092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af74a6e50f92ab74cb79c13fd9801398
+      internalID: -1029907917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: M_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dddbd63d2d88e4f8037c8ce3a8ff34
+      internalID: -1983135600
       vertices: []
       indices: 
       edges: []
@@ -338,15 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Stone_6: -151624349
-      Stone_8: 1719034308
-      Stone_1: -1825451475
-      Stone_4: -2141821623
-      Stone_2: 1808141076
-      Stone_5: 912983200
-      Stone_0: 1941230937
-      Stone_3: -957213084
-      Stone_7: 1730755040
+      M_Hurt_0: -592678719
+      M_Hurt_8: -1029907917
+      M_Hurt_3: 2016136568
+      M_Hurt_5: 1741906450
+      M_Hurt_7: 686774092
+      M_Hurt_9: -1983135600
+      M_Hurt_6: -767971910
+      M_Hurt_2: -699930013
+      M_Hurt_1: 1337146945
+      M_Hurt_4: -1810021327
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
