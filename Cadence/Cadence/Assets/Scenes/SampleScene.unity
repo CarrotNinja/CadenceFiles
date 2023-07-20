@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 224268653}
   - component: {fileID: 224268652}
   - component: {fileID: 224268651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: town
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 1018228803}
   - component: {fileID: 1018228802}
   - component: {fileID: 1018228801}
+  - component: {fileID: 1018228804}
   m_Layer: 0
   m_Name: LHidle_0
   m_TagString: Untagged
@@ -747,13 +748,47 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018228800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.42, y: -2.7701075, z: 0}
+  m_LocalPosition: {x: -1.402, y: -2.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018228804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018228800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b04aa5d0794dc4ca8aa16bae5bb96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterBounds:
+    m_Center: {x: 0, y: -0.22, z: 0}
+    m_Extent: {x: -0.03, y: 0.6, z: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _detectorCount: 3
+  _detectionRayLength: 0.48
+  _rayBuffer: 0.1
+  _acceleration: 90
+  _moveClamp: 13
+  _deAcceleration: 60
+  _apexBonus: 2
+  _fallClamp: -40
+  _minFallSpeed: 80
+  _maxFallSpeed: 120
+  _jumpHeight: 30
+  _jumpApexThreshold: 10
+  _coyoteTimeThreshold: 0.1
+  _jumpBuffer: 0.1
+  _jumpEndEarlyGravityModifier: 3
+  _freeColliderIterations: 10
 --- !u!1 &1331652689
 GameObject:
   m_ObjectHideFlags: 0
