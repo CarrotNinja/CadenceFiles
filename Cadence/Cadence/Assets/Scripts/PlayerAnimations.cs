@@ -9,8 +9,6 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
 
     private IPlayerController _player;
-    private bool _playerGrounded;
-    private Vector2 _movement;
     void Awake() => _player = GetComponentInParent<IPlayerController>();
 
     // Update is called once per frame
@@ -18,5 +16,11 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (_player == null) return;
         if (_player.Input.X != 0) transform.localScale = new Vector3(_player.Input.X > 0 ? 1 : -1, 1, 1);
+
+        _anim.SetBool("Jumping", _player.JumpingThisFrame);
+        _anim.SetFloat("VelocityX", Mathf.Abs(_player.RawMovement.x));
+        _anim.SetFloat("VelocityY", _player.RawMovement.y);
+        _anim.SetBool("Grounded", _player.Grounded);
     }
+
 }
