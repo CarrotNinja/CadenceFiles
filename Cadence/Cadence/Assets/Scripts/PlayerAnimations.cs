@@ -12,9 +12,8 @@ public class PlayerAnimations : MonoBehaviour
     private const string PLAYERIDLE = "PlayerIdle_";
     private const string PLAYERRUN = "PlayerRun_";
     private const string PLAYERHURT = "PlayerHurt_";
-    private const string PLAYERLANDING = "PlayerLanding_";
-    private const string PLAYERLIFTOFF = "PlayerLiftoff_";
-    private const string PLAYERFLOAT = "PlayerFloat_";
+    private const string PLAYERFALL = "PlayerFall_";
+    private const string PLAYERJUMP = "PlayerJump_";
 
     private string currentState;
     private char currentHealth = 'H';
@@ -30,39 +29,33 @@ public class PlayerAnimations : MonoBehaviour
         if (_player.Input.X != 0) transform.localScale = new Vector3(_player.Input.X > 0 ? 1 : -1, 1, 1);
         movement = _player.RawMovement;
 
-        if (currentState == PLAYERFLOAT && _player.Grounded)
-        {
-            ChangeAnimationState(PLAYERLANDING);
-        }
-        else if ((currentState == PLAYERRUN || currentState == PLAYERIDLE) && !_player.Grounded)
-        {
-            ChangeAnimationState(PLAYERLIFTOFF);
-        }
-        else if (Mathf.Abs(movement.x) < 0.1 && _player.Grounded)
-        {
-            ChangeAnimationState(PLAYERIDLE);
-        }
-        else if (_player.Grounded)
-        {
-            ChangeAnimationState(PLAYERRUN);
-        }
-        else if (!_player.Grounded)
-        {
-            ChangeAnimationState(PLAYERFLOAT);
-        }
 
+        if (_player.Grounded)
+        {
+            if (Mathf.Abs(movement.x) > 0.1)
+            {
+                ChangeAnimationState(PLAYERRUN);
+            }
+            else
+            {
+                ChangeAnimationState(PLAYERIDLE);
+            }
+        }
+        else
+        {
+            if (movement.y > 0)
+            {
+                ChangeAnimationState(PLAYERJUMP);
+            }
+            else
+            {
+                ChangeAnimationState(PLAYERFALL);
+            }
+        }
     }
-
-    bool IsAnimationFinished()
-    {
-        AnimatorStateInfo stateInfo = _anim.GetCurrentAnimatorStateInfo(0);
-        return stateInfo.normalizedTime >= 1.0f;
-    }
-
     void ChangeAnimationState(string newState)
     {
         if (newState == currentState) return;
-        if (!IsAnimationFinished() && (currentState == PLAYERLIFTOFF || currentState == PLAYERLANDING)) return;
         _anim.Play(newState + currentHealth);
         currentState = newState;
 
