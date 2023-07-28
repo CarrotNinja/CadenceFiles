@@ -19,6 +19,8 @@ namespace Controller
         bool LandingThisFrame { get; }
         Vector3 RawMovement { get; }
         bool Grounded { get; }
+        int Health { get; }
+        int MaxHealth { get; }
     }
 
     public struct RayRange

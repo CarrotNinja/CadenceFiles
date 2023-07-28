@@ -12,7 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Transform currentPoint;
-    private bool facingRight=true;
+    private bool facingRight=false;
 
     private void Awake()
     {

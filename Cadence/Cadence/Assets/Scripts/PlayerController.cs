@@ -14,16 +14,25 @@ namespace Controller
         public bool JumpingThisFrame { get; private set; }
         public bool LandingThisFrame { get; private set; }
         public Vector3 RawMovement { get; private set; }
+        public int Health { get; private set; }
+        public int MaxHealth { get; private set; }
         public bool Grounded => _colDown;
 
         private Vector3 _lastPosition;
         private float _currentHorizontalSpeed, _currentVerticalSpeed;
 
+        public HealthBar healthBar;
        
         private bool _active;
         void Awake() => Invoke(nameof(Activate), 0.5f);
         void Activate() => _active = true;
 
+        private void Start()
+        {
+            Health = 100;
+            MaxHealth = 100;
+            healthBar.SetMaxHealth(MaxHealth);
+        }
         private void Update()
         {
             if (!_active) return;
@@ -41,7 +50,11 @@ namespace Controller
 
             MoveCharacter(); // Actually perform the axis movement
 
-
+            if (UnityEngine.Input.GetKeyDown(KeyCode.P))
+            {
+                Health -= 10;
+            }
+            healthBar.SetHealth(Health);
         }
         #region Gather Input
         private void GatherInput()
