@@ -17,6 +17,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private string currentState;
     private char currentHealth = 'H';
+    private bool facingRight;
 
     private IPlayerController _player;
     private Vector2 movement;
@@ -26,7 +27,11 @@ public class PlayerAnimations : MonoBehaviour
     void Update()
     {
         if (_player == null) return;
-        if (_player.Input.X != 0) transform.localScale = new Vector3(_player.Input.X > 0 ? 1 : -1, 1, 1);
+        if ((facingRight && _player.Input.X > 0) || (!facingRight && _player.Input.X < 0))
+        {
+            facingRight=!facingRight;
+            transform.Rotate(0f, 180f, 0f);
+        }
         movement = _player.RawMovement;
 
 
