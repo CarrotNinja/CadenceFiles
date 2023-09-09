@@ -21,7 +21,13 @@ public class PlayerAnimations : MonoBehaviour
 
     private IPlayerController _player;
     private Vector2 movement;
-    void Awake() => _player = GetComponentInParent<IPlayerController>();
+
+    Transform parent; 
+    void Awake()
+    {
+        _player = GetComponentInParent<IPlayerController>();
+        parent = GetComponent<Transform>();
+    }
 
     // Update is called once per frame
     void Update()

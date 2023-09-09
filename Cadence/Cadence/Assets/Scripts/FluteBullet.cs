@@ -21,7 +21,7 @@ public class FluteBullet : MonoBehaviour
     void Start()
     {
         pos = transform.position;
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.4f);
         axis = transform.up;
     }
     void Update()
