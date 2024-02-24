@@ -3698,3 +3698,49 @@ Received Import Request.
   path: Assets/_wood beam 1.png
   artifactKey: Guid(6f5be49e9781b8447943cfd97112543e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/_wood beam 1.png using Guid(6f5be49e9781b8447943cfd97112543e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98caf96bf24c28bf290adf36b9a8906f') in 0.230108 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 72.317968 seconds.
+  path: Assets/Art/Tilemaps/Town.PNG
+  artifactKey: Guid(894de7fa06f01894780ae95f37bf4515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Town.PNG using Guid(894de7fa06f01894780ae95f37bf4515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b36a572f7e897c139cade6c21f5ec843') in 0.374693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/Tilemaps/Town2.PNG
+  artifactKey: Guid(3486839fbbfa8af4bb5da14c29b334b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Town2.PNG using Guid(3486839fbbfa8af4bb5da14c29b334b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f81783759039228436cffa1f782cc00') in 0.322887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 191.469427 seconds.
+  path: Assets/Art/Tilemaps/Bush.png
+  artifactKey: Guid(0191d43ea31f47f47ac0169444564c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Bush.png using Guid(0191d43ea31f47f47ac0169444564c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '949c42bfcd7aa25586dd0c22a608e3bf') in 0.360005 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/Tilemaps/Lamp.png
+  artifactKey: Guid(c1476b8e5ee60e54597a4b91d3794c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Lamp.png using Guid(c1476b8e5ee60e54597a4b91d3794c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f365d163dbffbfd6ed41d3faa3b55a7') in 0.276630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/Tilemaps/IMG_1942.PNG
+  artifactKey: Guid(74c1f1c15b5897c49a15c7aa5447d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/IMG_1942.PNG using Guid(74c1f1c15b5897c49a15c7aa5447d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40ddbbbe689776e51b48a2e47b82d6f9') in 0.233282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Art/Tilemaps/Sign.png
+  artifactKey: Guid(8235bd75ad4ebb84eb860298d31fe968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Sign.png using Guid(8235bd75ad4ebb84eb860298d31fe968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c270b1882677830bab44bdd1343649b7') in 0.241277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/Tilemaps/Forest.png
+  artifactKey: Guid(b8332af7200488540b03fe630a40522f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Forest.png using Guid(b8332af7200488540b03fe630a40522f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a215990138e2fdf50f998ddfe8be4901') in 0.277570 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

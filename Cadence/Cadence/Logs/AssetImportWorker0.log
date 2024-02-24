@@ -3860,3 +3860,43 @@ Received Import Request.
   path: Assets/_wood beam.png
   artifactKey: Guid(de80144ce2cf3594487085a3d96635db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/_wood beam.png using Guid(de80144ce2cf3594487085a3d96635db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffca7d51a3dd258d35850243132e1ec4') in 0.085419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 72.241720 seconds.
+  path: Assets/Art/Tilemaps/Rock.png
+  artifactKey: Guid(c275a64c175dd1e4c92a2ad18ee7b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Rock.png using Guid(c275a64c175dd1e4c92a2ad18ee7b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab103a21cf06161bddd5ecda5ce0cc2b') in 0.501346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.217006 seconds.
+  path: Assets/Art/Props/vase.png
+  artifactKey: Guid(c1a72952b51bbe1449eda2fc23dcec2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Props/vase.png using Guid(c1a72952b51bbe1449eda2fc23dcec2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2f97f1fe4394187079d8231edc43c7') in 0.176734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 185.270088 seconds.
+  path: Assets/Art/Tilemaps/_grass tiles no3 cadence.png
+  artifactKey: Guid(aa4335f0afe6cee41967c1633569a5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/_grass tiles no3 cadence.png using Guid(aa4335f0afe6cee41967c1633569a5be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb85869af29d8755d4819059e4bbb8e') in 0.290806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/Tilemaps/Bush2.png
+  artifactKey: Guid(f7ff17ca3034d9442bdd0757bca49061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Bush2.png using Guid(f7ff17ca3034d9442bdd0757bca49061) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bab6e0bb094074815dc05e2f8959cca') in 0.377492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Art/Tilemaps/Rock.png
+  artifactKey: Guid(c275a64c175dd1e4c92a2ad18ee7b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Rock.png using Guid(c275a64c175dd1e4c92a2ad18ee7b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c5ab42fc299b652806f18105262ae0e') in 0.323786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/Art/Tilemaps/Fence.png
+  artifactKey: Guid(84ad5a8b2a0f0234abf388ace087e62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Tilemaps/Fence.png using Guid(84ad5a8b2a0f0234abf388ace087e62d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02e58976a8b3ae785a46de9b988d7183') in 0.315441 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
