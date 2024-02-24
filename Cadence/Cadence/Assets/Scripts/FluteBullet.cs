@@ -7,7 +7,8 @@ public class FluteBullet : MonoBehaviour
     public float speed = 15f;
     public Rigidbody2D rb;
     public float frequency = 15f;
-    public float magnitude = 0.7f;
+    public float magnitude = 1f;
+    public int damage = 50;
 
     private float startTime;
 
@@ -28,5 +29,14 @@ public class FluteBullet : MonoBehaviour
     {
         pos += transform.right * Time.deltaTime * speed;
         transform.position = pos + axis * Mathf.Sin((Time.time-startTime) * frequency) * magnitude;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Monster monster = collision.GetComponent<Monster>();
+        if(monster != null )
+        {
+            monster.TakeDamage(damage);
+        }
     }
 }

@@ -21,6 +21,8 @@ namespace Controller
         bool Grounded { get; }
         int Health { get; }
         int MaxHealth { get; }
+
+        bool HurtThisFrame { get; }
     }
 
     public struct RayRange

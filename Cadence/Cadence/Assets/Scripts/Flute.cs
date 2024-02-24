@@ -1,3 +1,4 @@
+using Controller;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,19 @@ public class Flute : MonoBehaviour
     public GameObject flute;
 
     private float fireRate = 0.5f;
-    private float canFire = 0f;
+    private float fireCounter = 0f;
     private bool isShooting = false;
+
+
+    private IPlayerController _player;
+    void Awake()
+    {
+        _player = GetComponentInParent<IPlayerController>();
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&&_player.Grounded)
         {
             isShooting = true; // Player started shooting
         }
@@ -24,13 +32,13 @@ public class Flute : MonoBehaviour
         // Toggle the visibility of the flute based on whether the player is shooting
         flute.GetComponent<Renderer>().enabled = isShooting;
 
-        if (isShooting && Time.time > canFire)
+        if (isShooting && Time.time > fireCounter)
         {
             Shoot();
-            canFire = Time.time + fireRate;
+            fireCounter = Time.time + fireRate;
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") || !_player.Grounded)
         {
             isShooting = false; // Player released the fire button
         }

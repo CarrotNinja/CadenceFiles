@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Unity.VisualScripting;
-
+using UnityEditor;
 
 namespace Controller
 {
@@ -13,9 +13,12 @@ namespace Controller
         public FrameInput Input { get; private set; }
         public bool JumpingThisFrame { get; private set; }
         public bool LandingThisFrame { get; private set; }
+
+        public bool HurtThisFrame { get; private set; }
         public Vector3 RawMovement { get; private set; }
         public int Health { get; private set; }
         public int MaxHealth { get; private set; }
+
         public bool Grounded => _colDown;
 
         private Vector3 _lastPosition;
@@ -24,38 +27,83 @@ namespace Controller
         public HealthBar healthBar;
        
         private bool _active;
+
+        public Rigidbody2D rb;
+
+        public float KBForce;
+        public float KBCounter;
+        public float KBTotalTime;
+
+        public bool knockFromRight;
+       
+
         void Awake() => Invoke(nameof(Activate), 0.5f);
         void Activate() => _active = true;
+
 
         private void Start()
         {
             Health = 100;
             MaxHealth = 100;
             healthBar.SetMaxHealth(MaxHealth);
+
         }
         private void Update()
         {
             if (!_active) return;
             // Calculate velocity
-            Velocity = (transform.position - _lastPosition) / Time.deltaTime;
-            _lastPosition = transform.position;
-
-            GatherInput();
-            RunCollisionChecks();
-
-            CalculateWalk(); // Horizontal movement
-            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-            CalculateGravity(); // Vertical movement
-            CalculateJump(); // Possibly overrides vertical
-
-            MoveCharacter(); // Actually perform the axis movement
-
-            if (UnityEngine.Input.GetKeyDown(KeyCode.P))
+            if (KBCounter <= 0)
             {
-                Health -= 10;
+                rb.velocity = new Vector2(0, 0);
+                KBCounter -= Time.deltaTime;
+                if (KBCounter <= -0.25)
+                {
+                    HurtThisFrame = false;
+                }
+                
+                Velocity = (transform.position - _lastPosition) / Time.deltaTime;
+                _lastPosition = transform.position;
+
+                GatherInput();
+                RunCollisionChecks();
+
+                CalculateWalk(); // Horizontal movement
+                CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+                CalculateGravity(); // Vertical movement
+                CalculateJump(); // Possibly overrides vertical
+
+                MoveCharacter(); // Actually perform the axis movement
             }
-            healthBar.SetHealth(Health);
+            else
+            {
+                HurtThisFrame= true;
+                
+                if (knockFromRight)
+                {
+                    rb.velocity= new Vector2(-KBForce*2, KBForce);
+                }
+                if (!knockFromRight)
+                {
+                    rb.velocity = new Vector2(KBForce*2, KBForce);
+                }
+                KBCounter -= Time.deltaTime;
+            }
+
+            
+
         }
+
+
+        public void TakeDamage(int damage)
+        {
+            Health -= damage;
+            healthBar.SetHealth(Health);
+            if (Health <= 0) //Add death logic
+            {
+                Destroy(gameObject);
+            }
+        }
+
         #region Gather Input
         private void GatherInput()
         {

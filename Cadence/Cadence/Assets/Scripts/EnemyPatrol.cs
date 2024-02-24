@@ -14,6 +14,10 @@ public class EnemyPatrol : MonoBehaviour
     private Transform currentPoint;
     private bool facingRight=false;
 
+    public Transform playerTransform;
+    public bool isChasing;
+    public float chaseDistance;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,32 +28,54 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 point = currentPoint.position - transform.position;
-        if(currentPoint == pointB.transform)
+        if (isChasing)
         {
-            rb.velocity = new Vector2(speed, 0);
+            if(transform.position.x > playerTransform.position.x)
+            {
+                transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            if (transform.position.x < playerTransform.position.x)
+            {
+                transform.position += Vector3.right * speed * Time.deltaTime;
+            }
         }
         else
         {
-            rb.velocity = new Vector2(-speed, 0);
+            if(Vector2.Distance(transform.position, playerTransform.position)<chaseDistance)
+            {
+                isChasing = true;
+            }
+
+            Vector2 point = currentPoint.position - transform.position;
+            if (currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
+
+            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+            {
+                currentPoint = pointA.transform;
+                if (!facingRight)
+                {
+                    flip();
+                }
+            }
+            if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+            {
+                currentPoint = pointB.transform;
+                if (facingRight)
+                {
+                    flip();
+                }
+            }
         }
 
-        if(Vector2.Distance(transform.position,currentPoint.position)<0.5f && currentPoint == pointB.transform)
-        {
-            currentPoint = pointA.transform;
-            if (!facingRight)
-            {
-                flip();
-            }
-        }
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-        {
-            currentPoint = pointB.transform;
-            if (facingRight)
-            {
-                flip();
-            }
-        }
+
+        
     }
     private void flip()
     {
