@@ -35,6 +35,9 @@ namespace Controller
         public float KBTotalTime;
 
         public bool knockFromRight;
+
+        public AudioClip jumpClip;
+        public AudioClip damageClip;
        
 
         void Awake() => Invoke(nameof(Activate), 0.5f);
@@ -47,6 +50,14 @@ namespace Controller
             MaxHealth = 100;
             healthBar.SetMaxHealth(MaxHealth);
 
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("Fence"))
+            {
+                TakeDamage(1000);
+            }
         }
         private void Update()
         {
@@ -96,6 +107,7 @@ namespace Controller
 
         public void TakeDamage(int damage)
         {
+            SoundFXManager.instance.playSoundFXClip(damageClip, transform, 1f);
             Health -= damage;
             healthBar.SetHealth(Health);
             if (Health <= 0) //Add death logic
@@ -305,6 +317,7 @@ namespace Controller
             // Jump if: grounded or within coyote threshold || sufficient jump buffer
             if (Input.JumpDown && CanUseCoyote || HasBufferedJump)
             {
+                SoundFXManager.instance.playSoundFXClip(jumpClip, transform, 1f);
                 _currentVerticalSpeed = _jumpHeight;
                 _endedJumpEarly = false;
                 _coyoteUsable = false;
@@ -382,5 +395,6 @@ namespace Controller
 
         #endregion
     }
+    
 
 }

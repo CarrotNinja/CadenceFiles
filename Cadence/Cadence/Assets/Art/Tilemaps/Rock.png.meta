@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
@@ -571,7 +571,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Rock_3: 880323732
-      Rock_10: -329545771
+      Rock_13: -1525511373
       Rock_15: -1524879339
       Rock_9: -2127995171
       Rock_17: -1692766287
@@ -587,7 +587,7 @@ TextureImporter:
       Rock_8: -1812141918
       Rock_1: 1900314067
       Rock_16: -70882047
-      Rock_13: -1525511373
+      Rock_10: -329545771
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

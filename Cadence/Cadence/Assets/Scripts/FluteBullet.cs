@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FluteBullet : MonoBehaviour
 {
+    public AudioClip[] fluteSounds;
     public float speed = 15f;
     public Rigidbody2D rb;
     public float frequency = 15f;
@@ -21,6 +22,7 @@ public class FluteBullet : MonoBehaviour
     }
     void Start()
     {
+        SoundFXManager.instance.playRandomSoundFXClip(fluteSounds, transform, 0.6f);
         pos = transform.position;
         Destroy(gameObject, 0.4f);
         axis = transform.up;
@@ -34,9 +36,14 @@ public class FluteBullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Monster monster = collision.GetComponent<Monster>();
+        BossSM boss = collision.GetComponent<BossSM>();
         if(monster != null )
         {
             monster.TakeDamage(damage);
+        }else if(boss!=null)
+        {
+            boss.TakeDamage(damage);
         }
+        Destroy(gameObject);
     }
 }

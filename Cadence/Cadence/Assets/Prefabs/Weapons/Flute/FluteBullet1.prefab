@@ -136,6 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebd2e38331cd9749a90cf8459e74026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fluteSounds:
+  - {fileID: 8300000, guid: c5889b7d98232f84fbd1d08640454b88, type: 3}
+  - {fileID: 8300000, guid: 53b430b9a9a8b784f820cc7be0abe014, type: 3}
+  - {fileID: 8300000, guid: ad36f4fe9aac22d428f028749d055543, type: 3}
+  - {fileID: 8300000, guid: 3ad0217d533f51f4c90f5a525017f55c, type: 3}
   speed: 20
   rb: {fileID: 5980882487599290160}
   frequency: 15
